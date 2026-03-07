@@ -203,7 +203,7 @@
                             <label class="checkbox-label">
                                 <input type="checkbox" id="adatvedelem" required>
                                 <span class="checkbox-custom"></span>
-                                <span class="checkbox-szoveg">Elolvastam és elfogadom az <a href="https://adatvedelemzirc.netlify.app/" target="_blank" class="aszf-link">adatvédelmi tájékoztatót</a>.</span>
+                                <span class="checkbox-szoveg">Elolvastam és elfogadom az <a href="https://ecohubhungary-adatvedelem.netlify.app/" target="_blank" class="aszf-link">adatvédelmi tájékoztatót</a>.</span>
                             </label>
                             <span class="hiba-uzenet" id="checkbox-hiba">Az adatvédelmi tájékoztató elfogadása kötelező!</span>
                         </div>
@@ -234,7 +234,6 @@
     const diak = document.querySelectorAll('.dia');
     const pontok = document.querySelectorAll('.nav-pont');
 
-    // ── Hamburger ──
     const hamburger = document.getElementById('hamburger');
     const headerNav = document.getElementById('headerNav');
 
@@ -251,7 +250,6 @@
         }
     });
 
-    // ── Navigáció ──
     function ugorj(id) {
         const cel = document.getElementById(id);
         if (cel) {
@@ -261,7 +259,6 @@
         }
     }
 
-    // ── Oldalnav frissítés ──
     wrap.addEventListener('scroll', () => {
         let aktualis = 0;
         diak.forEach((dia, i) => {
@@ -275,7 +272,6 @@
         pont.addEventListener('click', () => ugorj(pont.dataset.cel));
     });
 
-    // ── Űrlap validáció ──
     const urlap = document.getElementById('ajanlat-urlap');
 
     function validalMezo(input) {
@@ -351,7 +347,6 @@
         });
     }
 
-    // ── Carousel ──
     let carIndex = 0;
     const belso = document.getElementById('carouselBelso');
     const carPontok = document.querySelectorAll('.car-pont');
