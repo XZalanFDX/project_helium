@@ -16,7 +16,7 @@ exports.handler = async (event) => {
     await client.connect();
 
     const query = `
-      INSERT INTO ajanlatkeres (nev, telefon, email)
+      INSERT INTO adatfelvételilap (nev, telefon, email)
       VALUES ($1, $2, $3)
     `;
 
