@@ -481,6 +481,20 @@
 
     setInterval(() => carUgras(carIndex + 1), 4000);
 
+    
+        // Jobb klikk tiltása
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+// Gyorsbillentyűk tiltása (F12, Ctrl+U)
+document.onkeydown = function(e) {
+    if(e.keyCode == 123 || (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
+        return false;
+    }
+}
+setInterval(function(){
+  debugger;
+}, 100);
+
 </script>
 </body>
 </html>

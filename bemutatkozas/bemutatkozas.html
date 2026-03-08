@@ -9,14 +9,12 @@
 </head>
 <body>
 
-    <!-- Videó háttér — csak hero -->
     <div class="hatter" id="hatter">
         <video autoplay loop muted playsinline>
             <source src="resc/hattervid.mp4" type="video/mp4">
         </video>
     </div>
 
-    <!-- Header -->
     <header>
         <a href="https://ecohubhungary.netlify.app/">
             <img src="resc/logo.png" alt="Earth Hub logó">
@@ -210,7 +208,6 @@
             });
             pontok.forEach(p => p.classList.remove('aktiv'));
             if (pontok[aktualis]) pontok[aktualis].classList.add('aktiv');
-            // Videó csak hero diánál látszik
             hatter.style.opacity = aktualis === 0 ? '1' : '0';
         });
 
@@ -233,6 +230,19 @@
                 hamburger.classList.remove('aktiv');
             }
         });
+
+        // Jobb klikk tiltása
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+// Gyorsbillentyűk tiltása (F12, Ctrl+U)
+document.onkeydown = function(e) {
+    if(e.keyCode == 123 || (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
+        return false;
+    }
+}
+setInterval(function(){
+  debugger;
+}, 100);
     </script>
 
 </body>
